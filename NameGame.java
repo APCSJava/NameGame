@@ -13,6 +13,7 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
+ * @author <additional author(s); if multiple, separate with commas>
  * @version 30 September 2014
  */
 
@@ -23,6 +24,7 @@ public class NameGame {
 		// TODO Read the name from standard input 
 		// TODO Produce the required four lines of verse 
 		// TODO Print the verse to standard output
+		// TODO remove "to do" comments when they are "to done"
 	}
 	
 	/*
