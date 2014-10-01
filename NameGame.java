@@ -54,13 +54,13 @@ System.out.println("Banana fanna fo-f" + aftvowel);
 
 
 if(name.charAt(0) == 'm'){ 
-System.out.println("Fie fie mo-" + aftvowel );
+System.out.println("Fee fie mo-" + aftvowel );
 
 }
 
 else{
 
-System.out.println("Fie fie mo-m"+ aftvowel);
+System.out.println("Fee fie mo-m"+ aftvowel);
 }
 System.out.println(name + "!");
 
