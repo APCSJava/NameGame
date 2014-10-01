@@ -21,18 +21,51 @@ import java.util.Scanner;
 
 public class NameGame {
 	public static void main(String[] args) {
-		// TODO Read the name from standard input 
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
+		String firstLn = "bo-b";
+		String scndLn = "bannana-fana-fo-f";
+		String thrdLn = "fee-fi-mo-m";
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("input a name with no caps: ");
+		String input = scan.nextLine();
+		String first = input.substring(0,1);
+		
+		int checkVowel = findFirstVowel(input);
+		if(checkVowel == 0) {
+			System.out.println(input +" "+input+" "+firstLn+input);
+			System.out.println(scndLn+input);
+			System.out.println(thrdLn+input);
+			System.out.println(input);
+		}
+		else if(first.equals("b")) {
+			String y = input.substring(checkVowel, input.length());
+			System.out.println(input +" "+input+" "+"bo-"+y);
+			System.out.println(scndLn+y);
+			System.out.println(thrdLn+y);
+			System.out.println(input);
+		}
+		else if(first.equals("f")) {
+			String y = input.substring(checkVowel, input.length());
+			System.out.println(input +" "+input+firstLn+y);
+			System.out.println("Bannana-fanna-fo-"+y);
+			System.out.println(thrdLn+y);
+			System.out.println(input);
+		}
+		else if(first.equals("m")) {
+			String y = input.substring(checkVowel, input.length());
+			System.out.println(input +" "+input+firstLn+y);
+			System.out.println(scndLn+y);
+			System.out.println("fee-fi-mo-"+y);
+			System.out.println(input);
+		}
+		else {
+			String y = input.substring(checkVowel, input.length());
+			System.out.println(input +" "+input+" "+firstLn+y);
+			System.out.println(scndLn+y);
+			System.out.println(thrdLn+y);
+			System.out.println(input);
+		}
 	}
-	
-	/*
-	 * Locates the position of the first occurrence of a vowel
-	 * 
-	 * @param s The string to be analyzed.  
-	 * @return 	The position (index) of the first vowel or -1 if no vowels present.
-	 */
 	public static int findFirstVowel(String s) {
 		for (int i = 0; i<s.length(); i++) {
 			char letter = s.charAt(i);
