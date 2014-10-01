@@ -13,7 +13,7 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
- * @author <additional author(s); if multiple, separate with commas>
+ * @author Felicia Grable
  * @version 30 September 2014
  */
 
@@ -58,9 +58,9 @@ public class NameGame {
                         System.out.println("m" + name + "!");
 
 		  } else {
-                        System.out.println(name + ", " +  name + ", bo-b" + name.substring(1, name.length()) + "," );
-                        System.out.println("Banana-fana fo-f" + name.substring(1, name.length()));
-                        System.out.println("Fee-fi-mo-m" + name.substring(1, name.length()));
+                        System.out.println(name + ", " +  name + ", bo-b" + name.substring(vowel, name.length()) + "," );
+                        System.out.println("Banana-fana fo-f" + name.substring(vowel, name.length()));
+                        System.out.println("Fee-fi-mo-m" + name.substring(vowel, name.length()));
                         System.out.println(name + "!");
 
 		  }
