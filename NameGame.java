@@ -65,9 +65,7 @@ public class NameGame {
 
 		  }
 		}
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
+		
 	}
 	
 	/*
