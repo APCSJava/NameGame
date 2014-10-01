@@ -13,7 +13,7 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
- * @author <additional author(s); if multiple, separate with commas>
+ * @author Rep Woroch
  * @version 30 September 2014
  */
 
@@ -21,10 +21,69 @@ import java.util.Scanner;
 
 public class NameGame {
 	public static void main(String[] args) {
-		// TODO Read the name from standard input 
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
+
+		System.out.println("Welcome to the Name Game! To play, just enter in a name and we will create a fun song!");
+		
+		Scanner scnr = new Scanner(System.in);
+		String inputName = scnr.next().toLowerCase();
+
+		int vowelIndex = NameGame.findFirstVowel(inputName);
+
+		//Check for a vowel.
+		if (vowelIndex == -1) {
+			System.out.println("Please enter a name with a vowel. Sorry :(");
+		}
+		
+		else {
+			//Check if it begins with a vowel.
+			if (vowelIndex == 0) {
+				System.out.println(inputName + ", " + inputName + ", " + "bo-" + "b" + inputName);
+				System.out.println("Banana fanna fo-" + "f" + inputName);
+				System.out.println("Fee fie mo-" + "m" + inputName);
+				System.out.println(inputName + "!");
+				return;
+			}
+
+			if (inputName.charAt(0) == 'b') {
+				String nameBody = inputName.substring(1, inputName.length());
+				
+				System.out.println(inputName + ", " + inputName + ", " + "bo-" + nameBody);
+				System.out.println("Banana fanna fo-" + "f" + nameBody);
+				System.out.println("Fee fie mo-" + "m" + nameBody);
+				System.out.println(inputName + "!");
+				return;
+			}
+			
+			else if (inputName.charAt(0) == 'f') {
+				String nameBody = inputName.substring(1, inputName.length());
+				
+				System.out.println(inputName + ", " + inputName + ", " + "bo-" + "b" + nameBody);
+				System.out.println("Banana fanna fo-" + nameBody);
+				System.out.println("Fee fie mo-" + "m" + nameBody);
+				System.out.println(inputName + "!");
+				return;
+			}
+			
+			else if (inputName.charAt(0) == 'm') {
+				String nameBody = inputName.substring(1, inputName.length());
+				
+				System.out.println(inputName + ", " + inputName + ", " + "bo-" + "b" + nameBody);
+				System.out.println("Banana fanna fo-" + "f" + nameBody);
+				System.out.println("Fee fie mo-" + nameBody);
+				System.out.println(inputName + "!");
+				return;
+			}
+			
+			else {
+				String nameBody = inputName.substring(vowelIndex, inputName.length());
+				
+				System.out.println(inputName + ", " + inputName + ", " + "bo-" + "b" + nameBody);
+				System.out.println("Banana fanna fo-" + "f" + nameBody);
+				System.out.println("Fee fie mo-" + "m" + nameBody);
+				System.out.println(inputName + "!");
+				return;
+			}
+		}
 	}
 	
 	/*
