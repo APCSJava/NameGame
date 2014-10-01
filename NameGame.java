@@ -25,6 +25,43 @@ public class NameGame {
 		// TODO Produce the required four lines of verse 
 		// TODO Print the verse to standard output
 		// TODO remove "to do" comments when they are "to done"
+		
+		Scanner nameFind = new Scanner(System.in);
+		String name = nameFind.next();
+		int index = findFirstVowel(name);
+		if(index == -1){
+			System.out.println("Please enter a name with a vowel");
+		}else if(index == 0){
+			System.out.println(name + " " + name + "bo b" + name);
+			System.out.println("Banana fana fo f" + name);
+			System.out.println("fee fi mo m" + name);
+		}else{
+			if(name.charAt(0) == 'B'){
+				String b = name.substring(index, name.length());
+				System.out.println(name + " " + name + "bo " + b);
+				System.out.println("Banana fana fo f" + b);
+				System.out.println("fee fi mo m" + b);
+			}else if(name.charAt(0) == 'F'){
+				String f = name.substring(index, name.length());
+				System.out.println(name + " " + name + "bo b" + f);
+				System.out.println("Banana fana fo " + f);
+				System.out.println("fee fi mo m" + f);
+			}else if(name.charAt(0) == 'M'){
+				String m = name.substring(index, name.length());
+				System.out.println(name + " " + name + "bo b" + m);
+				System.out.println("Banana fana fo f" + m);
+				System.out.println("fee fi mo " + m);
+			}else{
+				String y = name.substring(1, name.length());
+				System.out.println(name + " " + name + "bo b" + y);
+				System.out.println("Banana fana fo f" + y);
+				System.out.println("fee fi mo m" + y);
+			}
+			}	
+			
+		}	
+		}
+		
 	}
 	
 	/*
