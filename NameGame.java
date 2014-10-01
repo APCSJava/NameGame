@@ -21,7 +21,50 @@ import java.util.Scanner;
 
 public class NameGame {
 	public static void main(String[] args) {
-		// TODO Read the name from standard input 
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please put in a name:");
+		String name = scan.next();
+		name = name.toLowerCase();
+
+		int vowel = findFirstVowel(name);
+
+		if (vowel == -1) {
+		  System.out.println("Please put in name with vowel.");
+ 		} else if (vowel == 0) {
+		  System.out.println(name + ", " + name + ", bo-b" + name + "," );
+		  System.out.println("Banana-fana fo-f" + name);
+		  System.out.println("Fee-fi-mo-m" + name);
+		  System.out.println(name + "!");
+		} else if (vowel >= 1) {
+		  if (name.charAt(0) == 'b'){
+			name = name.substring(1, name.length());
+			System.out.println("b" + name + ", " + "b" + name + ", bo-" + name + "," );
+                 	System.out.println("Banana-fana fo-f" + name);
+                  	System.out.println("Fee-fi-mo-m" + name);
+                  	System.out.println("b" + name + "!");
+
+		  } else if (name.charAt(0) == 'f') {
+			name = name.substring(1, name.length());
+                        System.out.println("f" + name + ", " + "f" + name + ", bo-b" + name + "," );
+                        System.out.println("Banana-fana fo-" + name);
+                        System.out.println("Fee-fi-mo-m" + name);
+                        System.out.println("f" + name + "!");
+
+		  } else if (name.charAt(0) == 'm') {
+			name = name.substring(1, name.length());
+                        System.out.println("m" + name + ", " + "m" + name + ", bo-b" + name + "," );
+                        System.out.println("Banana-fana fo-f" + name);
+                        System.out.println("Fee-fi-mo-" + name);
+                        System.out.println("m" + name + "!");
+
+		  } else {
+                        System.out.println(name + ", " +  name + ", bo-b" + name.substring(1, name.length()) + "," );
+                        System.out.println("Banana-fana fo-f" + name.substring(1, name.length()));
+                        System.out.println("Fee-fi-mo-m" + name.substring(1, name.length()));
+                        System.out.println(name + "!");
+
+		  }
+		}
 		// TODO Produce the required four lines of verse 
 		// TODO Print the verse to standard output
 		// TODO remove "to do" comments when they are "to done"
