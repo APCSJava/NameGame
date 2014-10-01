@@ -13,7 +13,7 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
- * @author <additional author(s); if multiple, separate with commas>
+ * @author Calvin Bohner
  * @version 30 September 2014
  */
 
@@ -21,6 +21,49 @@ import java.util.Scanner;
 
 public class NameGame {
 	public static void main(String[] args) {
+
+int vowel = 0; 
+String name = ""; 
+
+Scanner input = new Scanner(System.in);
+
+System.out.println("Please input your name.");
+name = input.nextLine();
+
+vowel = findFirstVowel(name);
+
+name = name.toLowerCase(); 
+
+String aftvowel = name.substring(vowel, name.length());
+
+if (name.charAt(0) == 'b'){
+
+System.out.println(name + ", " + name + ", bo-" + aftvowel  );
+
+}
+else{
+System.out.println(name + ", " + name + ", bo-b" + aftvowel);
+} 
+
+if(name.charAt(0) == 'f'){
+System.out.println("Banana fanna fo-" + aftvowel );
+}
+else {
+System.out.println("Banana fanna fo-f" + aftvowel);
+}
+
+
+if(name.charAt(0) == 'm'){ 
+System.out.println("Fie fie mo-" + aftvowel );
+
+}
+
+else{
+
+System.out.println("Fie fie mo-m"+ aftvowel);
+}
+System.out.println(name + "!");
+
 		// TODO Read the name from standard input 
 		// TODO Produce the required four lines of verse 
 		// TODO Print the verse to standard output
@@ -36,7 +79,7 @@ public class NameGame {
 	public static int findFirstVowel(String s) {
 		for (int i = 0; i<s.length(); i++) {
 			char letter = s.charAt(i);
-			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
+			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u' || letter == 'y') {
 				return i;
 			}
 		
