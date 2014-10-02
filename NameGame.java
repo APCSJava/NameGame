@@ -28,11 +28,17 @@ public class NameGame {
 		
 	  Scanner userInput = new Scanner(System.in);
 	  String input = userInput.next();
+	  String inputLowerCase = input.toLowerCase();
 	  
 	  int vowelIndex=findFirstVowel(input);
 	  String afterVowel = input.substring(vowelIndex, input.length());
 	  
-	  if (input) {
+	  char firstChar=input.charAt(0);
+	  
+	  switch (char c) {
+	  	case 'b':
+	  		System.out.println();
+	  		break;
 	  }
 	  
 	  }
@@ -49,6 +55,7 @@ public class NameGame {
 	 * @return 	The position (index) of the first vowel or -1 if no vowels present.
 	 */
 	public static int findFirstVowel(String s) {
+		s=s.toLowerCase();
 		for (int i = 0; i<s.length(); i++) {
 			char letter = s.charAt(i);
 			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
@@ -59,15 +66,7 @@ public class NameGame {
 		
 	}
 	public static char beginChar(String s) {
-		if (s.charAt(0)=='b'){
-			return b;
-		}
-		if (s.charAt()=='m'){
-			return m;
-		}
-		if (){
-			return f;
-		}
+		return s.charAt(0);
 		
 	
 	}
