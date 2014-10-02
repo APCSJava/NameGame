@@ -22,10 +22,6 @@ import java.util.Scanner;
 public class NameGame {
 	public static void main(String[] args) {
 		
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
-		
 	  Scanner userInput = new Scanner(System.in);
 	  
 	  System.out.println("Please enter a name:");
@@ -34,7 +30,7 @@ public class NameGame {
 	  int vowelIndex=findFirstVowel(input);
 	  String afterVowel = input.substring(vowelIndex, input.length());
 	  
-	  char firstChar=input.charAt(0);
+	  char firstChar = Character.toLowerCase(input.charAt(0));//converts first char to lowercase
 	  
 	  switch (firstChar) {
 	  	case 'b':
