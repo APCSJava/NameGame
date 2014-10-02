@@ -27,8 +27,9 @@ public class NameGame {
 		// TODO remove "to do" comments when they are "to done"
 		
 	  Scanner userInput = new Scanner(System.in);
+	  
+	  System.out.println("Please enter a name:");
 	  String input = userInput.next();
-	  String inputLowerCase = input.toLowerCase();
 	  
 	  int vowelIndex=findFirstVowel(input);
 	  String afterVowel = input.substring(vowelIndex, input.length());
