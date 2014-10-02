@@ -35,13 +35,27 @@ public class NameGame {
 	  
 	  char firstChar=input.charAt(0);
 	  
-	  switch (char c) {
+	  switch (firstChar) {
 	  	case 'b':
-	  		System.out.println();
+	  		System.out.println(input+", "+ input+", bo-" +afterVowel);
+	  		System.out.println("Banana-fana fo-f " + afterVowel);
+	  		System.out.println("Fee-fi-mo--m " + afterVowel);
+	  		System.out.println(input +"!");
 	  		break;
+	  	case 'm':
+	  		System.out.println("testing m");
+	  		break;
+	  	case 'f':
+	  		System.out.println("testing f");
+	  		break;
+	  	default:
+	  		System.out.println("testing else");
+	  		break;
+	  		
+	  		
 	  }
 	  
-	  }
+	  
 	  
 	  }
 		
@@ -65,10 +79,6 @@ public class NameGame {
 		}	return -1;
 		
 	}
-	public static char beginChar(String s) {
-		return s.charAt(0);
-		
 	
-	}
 }
 
