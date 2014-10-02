@@ -16,17 +16,21 @@ public class NameGame {
 	public static void main(String[] args) {
 		
 	  Scanner userInput = new Scanner(System.in);
-	  
-	  System.out.println("Please enter a name:");
+	 
+	  //taking and storing user input 
+	  System.out.println("\nPlease enter a name:");
 	  String input = userInput.next();
-	  input = input.charAt(0).toUpperCase + input.substring(1, input.length()).toLowerCase());
+	  input = Character.toUpperCase(input.charAt(0)) + input.substring(1, input.length()).toLowerCase();
 	  
+	  //find first vowel and split word (to take part after vowel)
 	  int vowelIndex=findFirstVowel(input);
 	  String afterVowel = input.substring(vowelIndex, input.length());
 	  
 	  char firstChar = Character.toLowerCase(input.charAt(0)); //converts first char to lowercase
 	  
-	  switch (firstChar) {
+	  System.out.println(""); //extra line
+
+	  switch (firstChar) { //prints out final lyrics
 	  	case 'b':
 	  		System.out.println(input+", "+ input+", bo-" +afterVowel);
 	  		System.out.println("Banana-fana fo-f- " + afterVowel);
@@ -72,7 +76,7 @@ public class NameGame {
 		s=s.toLowerCase();
 		for (int i = 0; i<s.length(); i++) {
 			char letter = s.charAt(i);
-			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
+			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u'||(letter=='y' && i!=0)) {
 				return i;
 			}
 		
