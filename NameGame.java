@@ -60,7 +60,7 @@ public class NameGame {
 	  }
 		
 		
-	}
+	
 	
 	/*
 	 * Locates the position of the first occurrence of a vowel
