@@ -2,13 +2,6 @@
  * Provided a person's name (single word) the Name Game produces a rhyming
  * verse, as popularized by Shirley Ellis in her 1964 hit recording for Capital Records.
  *
- *
- * For example, provided the name Lisa
- * "Lisa, Lisa, bo-bisa
- *  Banana fanna fo-fisa
- *  Fee fie mo-misa
- *  Lisa!"
- *
  * The exact rules are available online and indicate special situations that arise when
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
@@ -26,27 +19,37 @@ public class NameGame {
 	  
 	  System.out.println("Please enter a name:");
 	  String input = userInput.next();
+	  input = input.charAt(0).toUpperCase + input.substring(1, input.length()).toLowerCase());
 	  
 	  int vowelIndex=findFirstVowel(input);
 	  String afterVowel = input.substring(vowelIndex, input.length());
 	  
-	  char firstChar = Character.toLowerCase(input.charAt(0));//converts first char to lowercase
+	  char firstChar = Character.toLowerCase(input.charAt(0)); //converts first char to lowercase
 	  
 	  switch (firstChar) {
 	  	case 'b':
 	  		System.out.println(input+", "+ input+", bo-" +afterVowel);
-	  		System.out.println("Banana-fana fo-f " + afterVowel);
-	  		System.out.println("Fee-fi-mo--m " + afterVowel);
+	  		System.out.println("Banana-fana fo-f- " + afterVowel);
+	  		System.out.println("Fee-fi-mo-m- " + afterVowel);
 	  		System.out.println(input +"!");
 	  		break;
 	  	case 'm':
-	  		System.out.println("testing m");
+	  		System.out.println(input+", "+ input+", bo-b- " +afterVowel);
+	  		System.out.println("Banana-fana fo-f- " + afterVowel);
+	  		System.out.println("Fee-fi-mo- " + afterVowel);
+	  		System.out.println(input +"!");
 	  		break;
 	  	case 'f':
-	  		System.out.println("testing f");
+	  		System.out.println(input+", "+ input+", bo-b-" +afterVowel);
+	  		System.out.println("Banana-fana fo- " + afterVowel);
+	  		System.out.println("Fee-fi-mo-m- " + afterVowel);
+	  		System.out.println(input +"!");
 	  		break;
 	  	default:
-	  		System.out.println("testing else");
+	  		System.out.println(input+", "+ input+", bo-b- " +afterVowel);
+	  		System.out.println("Banana-fana fo-f- " + afterVowel);
+	  		System.out.println("Fee-fi-mo-m- " + afterVowel);
+	  		System.out.println(input +"!");
 	  		break;
 	  		
 	  		
