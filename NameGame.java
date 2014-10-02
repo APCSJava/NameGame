@@ -13,18 +13,33 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
- * @author <additional author(s); if multiple, separate with commas>
- * @version 30 September 2014
+ * @author <Rebecca Brunsberg>
+ * @version 2nd October 2014
  */
 
 import java.util.Scanner;
 
 public class NameGame {
 	public static void main(String[] args) {
-		// TODO Read the name from standard input 
+		
 		// TODO Produce the required four lines of verse 
 		// TODO Print the verse to standard output
 		// TODO remove "to do" comments when they are "to done"
+		
+	  Scanner userInput = new Scanner(System.in);
+	  String input = userInput.next();
+	  
+	  int vowelIndex=findFirstVowel(input);
+	  String afterVowel = input.substring(vowelIndex, input.length());
+	  
+	  if (input) {
+	  }
+	  
+	  }
+	  
+	  }
+		
+		
 	}
 	
 	/*
@@ -42,6 +57,19 @@ public class NameGame {
 		
 		}	return -1;
 		
+	}
+	public static char beginChar(String s) {
+		if (s.charAt(0)=='b'){
+			return b;
+		}
+		if (s.charAt()=='m'){
+			return m;
+		}
+		if (){
+			return f;
+		}
+		
+	
 	}
 }
 
