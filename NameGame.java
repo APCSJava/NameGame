@@ -13,7 +13,7 @@
  * a person's name begins with one of the target substitutions (b, f, or m).
  * 
  * @author Kent Collins
- * @author <additional author(s); if multiple, separate with commas>
+ * @author Doug Heynderickx
  * @version 30 September 2014
  */
 
