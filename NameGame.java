@@ -16,32 +16,91 @@
  * @author <additional author(s); if multiple, separate with commas>
  * @version 30 September 2014
  */
-
+ import java.util.Random; 
 import java.util.Scanner;
 
 public class NameGame {
-	public static void main(String[] args) {
-		// TODO Read the name from standard input 
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
-	}
-	
-	/*
-	 * Locates the position of the first occurrence of a vowel
-	 * 
-	 * @param s The string to be analyzed.  
-	 * @return 	The position (index) of the first vowel or -1 if no vowels present.
-	 */
-	public static int findFirstVowel(String s) {
-		for (int i = 0; i<s.length(); i++) {
-			char letter = s.charAt(i);
-			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
-				return i;
-			}
-		
-		}	return -1;
-		
-	}
+ public static void main(String[] args) {
+
+Scanner scan = new Scanner(System.in);
+                System.out.println("What's your name");
+                String name = scan.next();
+                // TODO Produce the required four lines of verse
+                String first = name.substring(0,1);
+String rest;
+
+                if(first.equals("a")||first.equals("e")||first.equals("i")||first.equals("o")||first.equals("u")||first.equals("A")||first.equals("E")||first.equals("I")||first.equals("O")||first.equals("U"))
+{
+                  //Generates random letter b,f or m 
+                  Random rand = new Random();
+                  String array = "bfmBFM";
+                  char fi = array.charAt(rand.nextInt(6));
+                  String f = String.valueOf(fi);
+
+first = f;
+
+rest = name.substring(0,name.length());
 }
+else{
+first = name.substring(0, findFirstVowel(name));
+rest = name.substring(findFirstVowel(name),name.length());
+
+}
+
+//-----------------------------------------------------------------------------------------------
+
+if(first.substring(0,1).equals("b")||first.substring(0,1).equals("B")){
+                System.out.println(name+", "+name+ ", " + "bo-"+rest);
+
+ }
+ else
+{
+System.out.println(name+", "+name+ ", " + "bo-b"+rest);
+}
+
+
+//------------------------------------------------------------------------------------------------ 
+if(first.substring(0,1).equals("f")||first.substring(0,1).equals("F")){
+                System.out.println("bannana fanna fo-"+rest);
+
+ }
+ else
+{
+System.out.println("bannana fanna fo-f"+rest);
+}
+
+//----------------------------------------------------------------------------------------------
+                if(first.substring(0,1).equals("m")||first.substring(0,1).equals("M")){
+                System.out.println("Fee-fi-mo-"+rest);
+
+ }
+ else
+{
+                System.out.println("Fee-fi-mo-m"+rest);
+}
+
+//-----------------------------------------------------------------------------------------------------
+System.out.println(name +"!");
+ }
+
+//--------------------------------------------------------
+ /*
+  * Locates the position of the first occurrence of a vowel
+  * 
+  * @param s The string to be analyzed.  
+  * @return  The position (index) of the first vowel or -1 if no vowels present.
+  */
+ public static int findFirstVowel(String name) {
+  for (int i = 0; i<name.length(); i++) {
+   char letter = name.charAt(i);
+   if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
+    return i;
+   }
+  
+  } return -1;
+  
+ }
+}
+
+
 
