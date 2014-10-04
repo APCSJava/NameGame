@@ -67,7 +67,7 @@ public static void main (String[] args) {
  } else {
  System.out.println(nameInput + ", " + nameInput + " bo-b" + newName);
  System.out.println("Bannana-fana fo-f" + newName);
- System.out.println("Fee-fi-mo-" + newName);
+ System.out.println("Fee-fi-mo-m" + newName);
  System.out.println(nameInput + "!");
  }
 }
