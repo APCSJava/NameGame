@@ -42,7 +42,7 @@ rest = name.substring(findFirstVowel(name),name.length());
 //-----------------------------------------------------------------------------------------------
 
                 if(first.substring(0,1).equals("B")){
-                System.out.println(name+", "+name+ ", " + "bo-"+rest);
+                System.out.println(name+", "+name+ ", " + "bo-"+name.substring(1,name.length()));
 
  }
 	else
@@ -53,7 +53,7 @@ System.out.println(name+", "+name+ ", " + "bo-b"+rest);
 
 //------------------------------------------------------------------------------------------------ 
 if(first.substring(0,1).equals("F")){
-                System.out.println("bannana fanna fo-"+rest);
+                System.out.println("bannana fanna fo-"+name.substring(1,name.length()));
 
  }
 	else
@@ -63,7 +63,7 @@ System.out.println("bannana fanna fo-f"+rest);
 
 //----------------------------------------------------------------------------------------------
                 if(first.substring(0,1).equals("M")){
-                System.out.println("Fee-fi-mo-"+rest);
+                System.out.println("Fee-fi-mo-"+name.substring(1,name.length()));
 
  }
 	else
