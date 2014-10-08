@@ -17,31 +17,55 @@
  * @version 30 September 2014
  */
 
-import java.util.Scanner;
+import java.util.*;
 
 public class NameGame {
-	public static void main(String[] args) {
-		// TODO Read the name from standard input 
-		// TODO Produce the required four lines of verse 
-		// TODO Print the verse to standard output
-		// TODO remove "to do" comments when they are "to done"
-	}
-	
-	/*
-	 * Locates the position of the first occurrence of a vowel
-	 * 
-	 * @param s The string to be analyzed.  
-	 * @return 	The position (index) of the first vowel or -1 if no vowels present.
-	 */
-	public static int findFirstVowel(String s) {
-		for (int i = 0; i<s.length(); i++) {
-			char letter = s.charAt(i);
-			if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
-				return i;
-			}
-		
-		}	return -1;
-		
-	}
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println ("Please insert any name please");
+    Boolean done = false;
+    
+    while (!done) {
+      String name = input.next();
+      name = name.toLowerCase();
+      int position = findFirstVowel(name);
+      String moName = name.substring(position,name.length());
+      String firstLetter = name.substring (0,1);
+      
+      Boolean specialNames = firstLetter.equals("b") || firstLetter.equals("f") || firstLetter.equals("m");
+      
+      if (specialNames == true) {
+        System.out.println (name + ", " + name + ", " + "bo-b" + name.substring(1,name.length()));
+        System.out.println ("Banana fana fo-f" + name.substring(1,name.length()));
+        System.out.println ("Fee fie mo-b" + name.substring(1,name.length()));
+        System.out.println (name + "!");
+        
+        done = true;
+        
+      } else if (specialNames == false) {
+        System.out.println (name + ", " + name + ", " + "bo-" +  "b" + moName);
+        System.out.println ("Banana fanna fo-" + "f" + moName);
+        System.out.println ("Fee fie mo-" + "m" + moName);
+        System.out.println (name + "!");
+        
+        done = true;
+        
+      } else {
+        System.out.println ("Please write a name, what you wrote isn't really a name");
+      }
+      
+    }
+  }
+  
+  public static int findFirstVowel(String s) {
+    for (int i = 0; i<s.length(); i++) {
+      char letter = s.charAt(i);
+      if (letter=='a' || letter=='e' || letter=='i' || letter =='o' || letter =='u') {
+        return i;
+      }
+      
+    }       return -1;
+    
+  }
 }
 
